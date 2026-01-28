@@ -18,6 +18,7 @@ const Splash = ({ onFinish }) => {
     return (
         <div className={`splash-screen ${fading ? 'fade-out' : ''}`}>
             {/* Loader line optional, keeping it subtle at bottom or removing if it distracts from image */}
+            <img src="/images/Neziz-logo.png" alt="Neziz" className="splash-logo" />
             <div className="loader-line"></div>
         </div>
     );
