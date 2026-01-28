@@ -956,12 +956,20 @@
 .footer-logo {
     height: 40px;
     width: auto;
-    margin-bottom: 0.5rem;
+    /* margin-bottom removed */
 }
 
 .copyright {
     color: var(--text-muted);
     font-size: 0.85rem;
+    width: 100%;
+    /* Force new line */
+    text-align: center;
+    order: 3;
+    /* Ensure it is last */
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .footer-links {

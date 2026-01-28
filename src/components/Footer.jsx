@@ -10,7 +10,6 @@ const Footer = () => {
                     <Link to="/">
                         <img src="/images/Neziz-logo2.png" alt="Neziz" className="footer-logo" />
                     </Link>
-                    <p className="copyright">&copy; {new Date().getFullYear()} Neziz Agency. All rights reserved.</p>
                 </div>
 
                 <div className="footer-links">
@@ -19,6 +18,8 @@ const Footer = () => {
                     <Link to="/contact">Contact</Link>
                     <Link to="/privacy">Privacy Policy</Link>
                 </div>
+
+                <p className="copyright">&copy; {new Date().getFullYear()} Neziz Agency. All rights reserved.</p>
             </div>
         </footer>
     );
