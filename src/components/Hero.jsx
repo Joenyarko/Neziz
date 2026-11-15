@@ -2,44 +2,52 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
-    const [activeTab, setActiveTab] = useState('erp');
+    const [activeTab, setActiveTab] = useState('invento');
 
     const showcaseData = {
-        erp: {
-            title: 'Adroit Enterprise ERP & Cloud Systems',
+        invento: {
+            title: 'NezizInvento — Desktop Inventory & Point-of-Sale System',
+            category: 'Desktop Application',
+            tag: 'Offline-First Architecture',
+            image: '/images/nezizinvento.jpg',
+            desc: 'High-performance desktop inventory management application featuring live stock valuation, sales ledger, low-stock proactive alerts, categorized catalogs, and one-click database backups.',
+            metric1: 'Live Stock Valuation Engine',
+            metric2: 'Zero-Latency Offline POS',
+            actionText: 'View Software Details',
+            link: '/portfolio'
+        },
+        layby: {
+            title: 'Neziz Cloud — Retail Layby & Installment Management SaaS',
+            category: 'SaaS Platform',
+            tag: 'Live Cloud SaaS',
+            image: '/images/Neziz-mockup.png',
+            desc: 'Specialized enterprise SaaS platform designed for retail layaway purchases. Automates flexible installment plans, customer ledger tracking, item holds, and automated payment reminders.',
+            metric1: 'Automated Installment Schedules',
+            metric2: 'Multi-Tenant Cloud Architecture',
+            actionText: 'Visit Live Platform ↗',
+            externalUrl: 'https://neziz.cloud/'
+        },
+        adroit: {
+            title: 'Adroit Cloud — Enterprise Operating System',
             category: 'Enterprise Solution',
-            tag: 'Cloud Architecture',
+            tag: 'Enterprise Cloud',
             image: '/images/Adroit.png',
-            desc: 'Unified enterprise resource planning consolidating inventory, finance, and operational workflows into a real-time command center.',
-            metric1: '99.98% System Uptime',
-            metric2: '45% Faster Processing'
+            desc: 'Unified enterprise resource planning consolidating inventory, finance, payroll, and executive telemetry into one connected system across desktop, web, and mobile.',
+            metric1: '99.98% System Reliability',
+            metric2: 'Unified ERP Workflows',
+            actionText: 'Visit Live Site ↗',
+            externalUrl: 'https://home.adroitcloud.online/'
         },
-        recon: {
-            title: 'AI Bank Reconciliation & FinTech Core',
-            category: 'FinTech Automation',
-            tag: 'Automated Ledger',
-            image: '/images/Bankrecon.png',
-            desc: 'Automated financial reconciliation engine matching thousands of banking transactions with zero discrepancies.',
-            metric1: '100% Audit-Ready',
-            metric2: '10x Faster Reconciliations'
-        },
-        analytics: {
-            title: 'Enterprise Business Intelligence & Analytics',
-            category: 'Data Optimization',
-            tag: 'Real-Time Insights',
-            image: '/images/B.A.png',
-            desc: 'High-throughput analytics engine delivering actionable forecasting and customer intelligence dashboards.',
-            metric1: 'Live Telemetry',
-            metric2: '+38% Decision Accuracy'
-        },
-        ecom: {
-            title: 'Scalable Commerce & Portal Infrastructure',
-            category: 'Web Applications',
-            tag: 'Digital Retail',
-            image: '/images/ECOM.png',
-            desc: 'Modern commerce architecture with high conversion checkouts, inventory synchronisation, and payment gateway routing.',
-            metric1: '< 80ms Latency',
-            metric2: 'Global Payment Ready'
+        viotor: {
+            title: 'Shop Viotor — Premier Ghana & ATU Marketplace',
+            category: 'Modern E-Commerce',
+            tag: 'Live Marketplace',
+            image: '/images/shopviotor.png',
+            desc: 'Robust multi-vendor digital commerce platform built for Accra Technical University (ATU) community and Ghanaian consumers, equipped with instant Mobile Money payments and automated order fulfillment.',
+            metric1: 'Mobile Money & Card Checkout',
+            metric2: 'Multi-Vendor Architecture',
+            actionText: 'Visit Live Marketplace ↗',
+            externalUrl: 'https://www.shopviotor.com/'
         }
     };
 
@@ -68,7 +76,7 @@ const Hero = () => {
 
                 {/* Subtitle */}
                 <p className="hero-sub">
-                    We architect scalable web applications, bespoke enterprise systems, and high-performance digital platforms that empower ambitious organizations to lead their markets.
+                    We architect scalable web applications, bespoke desktop systems, and modern digital commerce platforms that empower ambitious organizations to lead their markets.
                 </p>
 
                 {/* Call-to-action buttons */}
@@ -80,7 +88,7 @@ const Hero = () => {
                         </svg>
                     </Link>
                     <Link to="/portfolio" className="btn btn-outline btn-lg">
-                        <span>Explore Portfolio</span>
+                        <span>Explore Our Work</span>
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
@@ -93,7 +101,7 @@ const Hero = () => {
                 <div className="container proof-strip-inner">
                     <div className="proof-item">
                         <span className="proof-icon">✓</span>
-                        <span>Enterprise Clean Architecture</span>
+                        <span>Live E-Commerce & SaaS Platforms</span>
                     </div>
                     <div className="proof-separator">•</div>
                     <div className="proof-item">
@@ -103,12 +111,12 @@ const Hero = () => {
                     <div className="proof-separator">•</div>
                     <div className="proof-item">
                         <span className="proof-icon">✓</span>
-                        <span>99.9% Production SLA & Reliability</span>
+                        <span>Custom Desktop & Cloud Systems</span>
                     </div>
                     <div className="proof-separator">•</div>
                     <div className="proof-item">
                         <span className="proof-icon">✓</span>
-                        <span>Low-Code & Bespoke Full-Stack Systems</span>
+                        <span>Proven Enterprise SLA & Support</span>
                     </div>
                 </div>
             </div>
@@ -128,11 +136,11 @@ const Hero = () => {
                                 <rect x="3" y="6" width="10" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.2"/>
                                 <path d="M5.5 6V4.5C5.5 3.11929 6.61929 2 8 2C9.38071 2 10.5 3.11929 10.5 4.5V6" stroke="currentColor" strokeWidth="1.2"/>
                             </svg>
-                            <span>neziz.studio / enterprise-solutions</span>
+                            <span>neziz.studio / verified-deployments</span>
                         </div>
                         <div className="dash-window-status">
                             <span className="status-indicator"></span>
-                            <span>Live Production</span>
+                            <span>Live Deployments</span>
                         </div>
                     </div>
 
@@ -141,32 +149,32 @@ const Hero = () => {
                         {/* Tab Switcher */}
                         <div className="dash-tabs-bar">
                             <button 
-                                className={`dash-tab-btn ${activeTab === 'erp' ? 'active' : ''}`}
-                                onClick={() => setActiveTab('erp')}
+                                className={`dash-tab-btn ${activeTab === 'invento' ? 'active' : ''}`}
+                                onClick={() => setActiveTab('invento')}
                             >
                                 <span className="tab-dot"></span>
-                                <span>Adroit Enterprise ERP</span>
+                                <span>NezizInvento (Desktop)</span>
                             </button>
                             <button 
-                                className={`dash-tab-btn ${activeTab === 'recon' ? 'active' : ''}`}
-                                onClick={() => setActiveTab('recon')}
+                                className={`dash-tab-btn ${activeTab === 'layby' ? 'active' : ''}`}
+                                onClick={() => setActiveTab('layby')}
                             >
                                 <span className="tab-dot"></span>
-                                <span>FinTech Reconciliation</span>
+                                <span>Neziz Cloud (SaaS)</span>
                             </button>
                             <button 
-                                className={`dash-tab-btn ${activeTab === 'analytics' ? 'active' : ''}`}
-                                onClick={() => setActiveTab('analytics')}
+                                className={`dash-tab-btn ${activeTab === 'adroit' ? 'active' : ''}`}
+                                onClick={() => setActiveTab('adroit')}
                             >
                                 <span className="tab-dot"></span>
-                                <span>Business Analytics</span>
+                                <span>Adroit Cloud ERP</span>
                             </button>
                             <button 
-                                className={`dash-tab-btn ${activeTab === 'ecom' ? 'active' : ''}`}
-                                onClick={() => setActiveTab('ecom')}
+                                className={`dash-tab-btn ${activeTab === 'viotor' ? 'active' : ''}`}
+                                onClick={() => setActiveTab('viotor')}
                             >
                                 <span className="tab-dot"></span>
-                                <span>Digital Commerce</span>
+                                <span>Shop Viotor (E-Commerce)</span>
                             </button>
                         </div>
 
@@ -192,7 +200,7 @@ const Hero = () => {
                                 <div className="meta-stats-row">
                                     <div className="meta-stat-box">
                                         <div className="stat-value">{currentItem.metric1}</div>
-                                        <div className="stat-label">Performance Benchmark</div>
+                                        <div className="stat-label">Core Architecture</div>
                                     </div>
                                     <div className="meta-stat-box">
                                         <div className="stat-value">{currentItem.metric2}</div>
@@ -201,11 +209,22 @@ const Hero = () => {
                                 </div>
 
                                 <div className="meta-cta-row">
-                                    <Link to="/portfolio" className="btn btn-outline btn-sm">
-                                        View Case Details →
-                                    </Link>
+                                    {currentItem.externalUrl ? (
+                                        <a 
+                                            href={currentItem.externalUrl} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer" 
+                                            className="btn btn-primary btn-sm"
+                                        >
+                                            {currentItem.actionText}
+                                        </a>
+                                    ) : (
+                                        <Link to={currentItem.link || '/portfolio'} className="btn btn-primary btn-sm">
+                                            {currentItem.actionText}
+                                        </Link>
+                                    )}
                                     <Link to="/contact" className="btn btn-ghost btn-sm">
-                                        Request Similar Build
+                                        Request Similar Solution
                                     </Link>
                                 </div>
                             </div>
