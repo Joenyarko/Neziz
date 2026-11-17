@@ -101,9 +101,9 @@ export const projectsData = [
       end: '',
       status: 'Dates not specified'
     },
-    engagementType: 'Informal / Campus e-commerce project for friends & merchant partners',
-    exactRole: 'Frontend Web Developer',
-    collaborators: 'ATU merchant partners & founders (Solo vs. team role pending confirmation)',
+    engagementType: 'Informal / Campus e-commerce project (Solo storefront build)',
+    exactRole: 'Frontend Web Developer (Solo Build)',
+    collaborators: 'Solo frontend storefront build (coordinated with ATU student marketplace founders)',
     problem: 'Student entrepreneurs and local vendors at Accra Technical University (ATU) required an accessible, mobile-first marketplace to display product listings and facilitate customer ordering.',
     workPersonallyDelivered: [
       'Built responsive e-commerce storefront interfaces including product grids, category filtering, and item detail views.',
@@ -125,9 +125,8 @@ export const projectsData = [
     testingPerformed: 'Simulated mobile phone viewports (320px–420px); tested product filter interactions and tap targets.',
     handover: 'Web templates and frontend application files deployed to hosting.',
     evidencedOutcome: 'Deployed live marketplace accessible to student vendors and consumers.',
-    scopeDisclaimer: 'Work focused on frontend storefront development and user interface integration. All order volume, transaction metrics, and usage statistics are strictly omitted.',
+    scopeDisclaimer: 'Work focused on frontend storefront development and user interface integration delivered solo. All order volume, transaction metrics, and usage statistics are strictly omitted.',
     unresolvedFacts: [
-      'Confirm whether build was solo or with teammates.',
       'Publication permission confirmation with marketplace owner.'
     ]
   },
