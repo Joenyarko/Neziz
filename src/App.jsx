@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
-// Components
+// Core Components
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import WhyChooseUs from './components/WhyChooseUs';
-import Services from './components/Services';
 import Portfolio from './components/Portfolio';
-import GlobalSection from './components/GlobalSection';
-import Testimonials from './components/Testimonials';
+import CaseStudyDetail from './components/CaseStudyDetail';
 import AboutSection from './components/AboutSection';
 import ContactSection from './components/ContactSection';
 import CtaBanner from './components/CtaBanner';
@@ -24,36 +21,18 @@ const ScrollToTop = () => {
   return null;
 };
 
-// Home Page: Flagship experience
+// Home Page: Web Developer Positioning & Candidate Evidence
 const HomePage = () => (
   <>
     <Hero />
-    <WhyChooseUs />
-    <Services />
     <Portfolio />
-    <GlobalSection />
-    <Testimonials />
-    <CtaBanner />
-  </>
-);
-
-// Inner Pages with consistent CTA
-const AboutPage = () => (
-  <>
     <AboutSection />
-    <GlobalSection />
+    <ContactSection />
     <CtaBanner />
   </>
 );
 
-const ServicesPage = () => (
-  <>
-    <Services />
-    <WhyChooseUs />
-    <CtaBanner />
-  </>
-);
-
+// Dedicated Case Studies & Projects Listing
 const PortfolioPage = () => (
   <>
     <Portfolio />
@@ -61,6 +40,23 @@ const PortfolioPage = () => (
   </>
 );
 
+// Individual Project Case Study Page
+const CaseStudyPage = () => (
+  <>
+    <CaseStudyDetail />
+    <CtaBanner />
+  </>
+);
+
+// About & Skills Page
+const AboutPage = () => (
+  <>
+    <AboutSection />
+    <CtaBanner />
+  </>
+);
+
+// Contact Page
 const ContactPage = () => (
   <>
     <ContactSection />
@@ -68,10 +64,26 @@ const ContactPage = () => (
 );
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(() => {
+    if (typeof window !== 'undefined') {
+      if (window.location.search.includes('no_splash')) return false;
+      if (sessionStorage.getItem('joe_has_visited')) return false;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return false;
+    }
+    return true;
+  });
+
+  const handleFinish = () => {
+    if (typeof window !== 'undefined') {
+      try {
+        sessionStorage.setItem('joe_has_visited', 'true');
+      } catch (e) {}
+    }
+    setLoading(false);
+  };
 
   if (loading) {
-    return <Splash onFinish={() => setLoading(false)} />;
+    return <Splash onFinish={handleFinish} />;
   }
 
   return (
@@ -79,12 +91,14 @@ function App() {
       <div className="app-shell fade-in">
         <ScrollToTop />
         <Navbar />
-        <main className="main-content">
+        <main id="main-content" className="main-content">
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/services" element={<ServicesPage />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
+            <Route path="/portfolio/:id" element={<CaseStudyPage />} />
+            <Route path="/projects" element={<PortfolioPage />} />
+            <Route path="/projects/:id" element={<CaseStudyPage />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             {/* Fallback to Home */}
             <Route path="*" element={<HomePage />} />

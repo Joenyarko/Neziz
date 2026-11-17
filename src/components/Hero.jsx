@@ -2,238 +2,252 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
-    const [activeTab, setActiveTab] = useState('invento');
+  const [activeTab, setActiveTab] = useState('viotor');
 
-    const showcaseData = {
-        invento: {
-            title: 'NezizInvento — Desktop Inventory & Point-of-Sale System',
-            category: 'Desktop Application',
-            tag: 'Offline-First Architecture',
-            image: '/images/nezizinvento.jpg',
-            desc: 'High-performance desktop inventory management application featuring live stock valuation, sales ledger, low-stock proactive alerts, categorized catalogs, and one-click database backups.',
-            metric1: 'Live Stock Valuation Engine',
-            metric2: 'Zero-Latency Offline POS',
-            actionText: 'View Software Details',
-            link: '/portfolio'
-        },
-        layby: {
-            title: 'Neziz Cloud — Retail Layby & Installment Management SaaS',
-            category: 'SaaS Platform',
-            tag: 'Live Cloud SaaS',
-            image: '/images/Neziz-mockup.png',
-            desc: 'Specialized enterprise SaaS platform designed for retail layaway purchases. Automates flexible installment plans, customer ledger tracking, item holds, and automated payment reminders.',
-            metric1: 'Automated Installment Schedules',
-            metric2: 'Multi-Tenant Cloud Architecture',
-            actionText: 'Visit Live Platform ↗',
-            externalUrl: 'https://neziz.cloud/'
-        },
-        adroit: {
-            title: 'Adroit Cloud — Enterprise Operating System',
-            category: 'Enterprise Solution',
-            tag: 'Enterprise Cloud',
-            image: '/images/Adroit.png',
-            desc: 'Unified enterprise resource planning consolidating inventory, finance, payroll, and executive telemetry into one connected system across desktop, web, and mobile.',
-            metric1: '99.98% System Reliability',
-            metric2: 'Unified ERP Workflows',
-            actionText: 'Visit Live Site ↗',
-            externalUrl: 'https://home.adroitcloud.online/'
-        },
-        viotor: {
-            title: 'Shop Viotor — Premier Ghana & ATU Marketplace',
-            category: 'Modern E-Commerce',
-            tag: 'Live Marketplace',
-            image: '/images/shopviotor.png',
-            desc: 'Robust multi-vendor digital commerce platform built for Accra Technical University (ATU) community and Ghanaian consumers, equipped with instant Mobile Money payments and automated order fulfillment.',
-            metric1: 'Mobile Money & Card Checkout',
-            metric2: 'Multi-Vendor Architecture',
-            actionText: 'Visit Live Marketplace ↗',
-            externalUrl: 'https://www.shopviotor.com/'
-        }
-    };
+  const candidateHighlights = {
+    viotor: {
+      title: 'Shop Viotor — Campus & Community E-Commerce Marketplace',
+      tag: 'E-Commerce Candidate',
+      status: 'Live Marketplace',
+      image: '/images/shopviotor.png',
+      desc: 'Frontend marketplace development serving Accra Technical University vendors and consumers, built with responsive product browsing and Mobile Money checkout touchpoints.',
+      stack: ['HTML5', 'CSS3', 'JavaScript', 'Responsive UI'],
+      caseStudyUrl: '/portfolio/shop-viotor',
+      liveUrl: 'https://www.shopviotor.com/'
+    },
+    wiloty: {
+      title: 'Wiloty Foundation — Community Development & Education NGO',
+      tag: 'NGO Candidate',
+      status: 'Live Website',
+      image: '/images/wiloty.jpg',
+      desc: 'Accessible website structure and responsive layout developed to highlight community development initiatives, basic school support, and rural advancement across Ghana.',
+      stack: ['HTML5', 'CSS3', 'JavaScript', 'Mobile-First'],
+      caseStudyUrl: '/portfolio/wiloty-foundation',
+      liveUrl: 'https://wilotyfoundation.org/'
+    },
+    invento: {
+      title: 'NezizInvento — Desktop Inventory & Point-of-Sale Tool',
+      tag: 'Desktop Software',
+      status: 'Verified Working Tool',
+      image: '/images/nezizinvento.jpg',
+      desc: 'Standalone desktop inventory tool engineered for offline retail reliability, featuring live stock valuation calculation (GH₵13,400+), low-stock warning indicators, and sales logs.',
+      stack: ['Desktop UI Architecture', 'Local Storage', 'Offline Telemetry'],
+      caseStudyUrl: '/portfolio/nezizinvento',
+      liveUrl: null
+    },
+    sappcloud: {
+      title: 'SappCloud — Free Microsoft SQL Training Sessions',
+      tag: 'Web Application Candidate',
+      status: 'Live Portal',
+      image: '/images/B.A.png',
+      desc: 'Structured curriculum presentation and session schedule portal developed for free Microsoft SQL Server database training sessions and student resources.',
+      stack: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Layout'],
+      caseStudyUrl: '/portfolio/sappcloud',
+      liveUrl: 'https://sappcloud.net/'
+    }
+  };
 
-    const currentItem = showcaseData[activeTab];
+  const currentHighlight = candidateHighlights[activeTab];
 
-    return (
-        <section className="hero-section">
-            <div className="hero-glow-ambient"></div>
-            
-            <div className="container hero-container">
-                {/* Eyebrow Badge */}
-                <div className="hero-eyebrow-wrapper">
-                    <div className="hero-eyebrow">
-                        <span className="eyebrow-pulse-dot"></span>
-                        <span className="eyebrow-tag">Neziz Agency</span>
-                        <span className="eyebrow-divider">/</span>
-                        <span>Enterprise Software & Digital Engineering</span>
-                    </div>
-                </div>
+  return (
+    <section className="hero-section" aria-label="Introduction and positioning">
+      <div className="hero-glow-ambient" aria-hidden="true"></div>
 
-                {/* Hero Editorial Heading */}
-                <h1 className="hero-h1">
-                    Next Level <em>Solutions</em>,<br />
-                    Engineered for Today.
-                </h1>
+      <div className="container hero-container">
+        {/* Eyebrow Badge */}
+        <div className="hero-eyebrow-wrapper">
+          <div className="hero-eyebrow">
+            <span className="eyebrow-pulse-dot" aria-hidden="true"></span>
+            <span className="eyebrow-tag">Joe Nyarko</span>
+            <span className="eyebrow-divider" aria-hidden="true">/</span>
+            <span>Web Developer • Mamprobi, Accra</span>
+          </div>
+        </div>
 
-                {/* Subtitle */}
-                <p className="hero-sub">
-                    We architect scalable web applications, bespoke desktop systems, and modern digital commerce platforms that empower ambitious organizations to lead their markets.
-                </p>
+        {/* STATIC HEADLINE - Readable, works without JavaScript, respects reduced motion */}
+        <h1 className="hero-h1">
+          Web developer building client websites and web applications.
+        </h1>
 
-                {/* Call-to-action buttons */}
-                <div className="hero-actions">
-                    <Link to="/contact" className="btn btn-primary btn-lg">
-                        <span>Start Your Project</span>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.33337 8H12.6667M12.6667 8L8.00004 3.33337M12.6667 8L8.00004 12.6667" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                    </Link>
-                    <Link to="/portfolio" className="btn btn-outline btn-lg">
-                        <span>Explore Our Work</span>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                    </Link>
-                </div>
+        {/* Subtitle */}
+        <p className="hero-sub">
+          I build clean, accessible, and responsive client websites and web applications using HTML, CSS, React, PHP, and MySQL. Ready to contribute practical problem-solving to web development teams.
+        </p>
+
+        {/* Leading Core Skills Badges */}
+        <div className="hero-lead-skills-bar" aria-label="Core Technical Skills">
+          <span className="lead-skills-label">Core Technologies:</span>
+          <div className="lead-skills-tags">
+            <span className="tech-badge-primary">HTML</span>
+            <span className="tech-badge-primary">CSS</span>
+            <span className="tech-badge-primary">React</span>
+            <span className="tech-badge-primary">PHP</span>
+            <span className="tech-badge-primary">MySQL</span>
+          </div>
+        </div>
+
+        {/* Supporting Background Pill */}
+        <div className="hero-supporting-bg-pill">
+          <span className="supporting-icon" aria-hidden="true">📌</span>
+          <span>
+            Supporting background in <strong>Data Analysis</strong> and <strong>Virtual Assistance</strong>.
+          </span>
+        </div>
+
+        {/* Call to Action Buttons */}
+        <div className="hero-actions">
+          <Link to="/portfolio" className="btn btn-primary btn-lg">
+            <span>View Projects & Case Studies</span>
+            <span className="btn-arrow" aria-hidden="true">→</span>
+          </Link>
+          <Link to="/contact" className="btn btn-outline btn-lg">
+            <span>Contact Joe Nyarko</span>
+          </Link>
+        </div>
+
+        {/* CV Status Note (No broken download button) */}
+        <p className="cv-status-hint">
+          <span>📄</span> CV available upon request for active recruiter reviews — reach out via email or phone.
+        </p>
+      </div>
+
+      {/* Proof & Reliability Strip */}
+      <div className="proof-strip" aria-label="Development standards">
+        <div className="container proof-strip-inner">
+          <div className="proof-item">
+            <span className="proof-icon" aria-hidden="true">✓</span>
+            <span>Semantic & Accessible HTML/CSS</span>
+          </div>
+          <div className="proof-separator" aria-hidden="true">•</div>
+          <div className="proof-item">
+            <span className="proof-icon" aria-hidden="true">✓</span>
+            <span>Mobile-First Testing (320px–1280px+)</span>
+          </div>
+          <div className="proof-separator" aria-hidden="true">•</div>
+          <div className="proof-item">
+            <span className="proof-icon" aria-hidden="true">✓</span>
+            <span>Verified Case Studies & Scope Definition</span>
+          </div>
+          <div className="proof-separator" aria-hidden="true">•</div>
+          <div className="proof-item">
+            <span className="proof-icon" aria-hidden="true">✓</span>
+            <span>Primary Phone: +233242528504</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Candidate Showcase Frame */}
+      <div className="container dash-outer">
+        <div className="dash-frame">
+          {/* Window Header */}
+          <div className="dash-window-header">
+            <div className="dash-window-controls" aria-hidden="true">
+              <span className="win-dot dot-close"></span>
+              <span className="win-dot dot-min"></span>
+              <span className="win-dot dot-max"></span>
+            </div>
+            <div className="dash-window-url">
+              <span aria-hidden="true">🔒</span>
+              <span>joenyarko.dev / verified-candidate-proof</span>
+            </div>
+            <div className="dash-window-status">
+              <span className="status-indicator" aria-hidden="true"></span>
+              <span>Candidate Case Studies</span>
+            </div>
+          </div>
+
+          {/* Body */}
+          <div className="dash-body">
+            {/* Tabs */}
+            <div className="dash-tabs-bar" role="tablist" aria-label="Featured Candidate Projects">
+              <button 
+                role="tab"
+                aria-selected={activeTab === 'viotor'}
+                className={`dash-tab-btn ${activeTab === 'viotor' ? 'active' : ''}`}
+                onClick={() => setActiveTab('viotor')}
+              >
+                <span className="tab-dot" aria-hidden="true"></span>
+                <span>Shop Viotor (E-Com)</span>
+              </button>
+              <button 
+                role="tab"
+                aria-selected={activeTab === 'wiloty'}
+                className={`dash-tab-btn ${activeTab === 'wiloty' ? 'active' : ''}`}
+                onClick={() => setActiveTab('wiloty')}
+              >
+                <span className="tab-dot" aria-hidden="true"></span>
+                <span>Wiloty Foundation (NGO)</span>
+              </button>
+              <button 
+                role="tab"
+                aria-selected={activeTab === 'invento'}
+                className={`dash-tab-btn ${activeTab === 'invento' ? 'active' : ''}`}
+                onClick={() => setActiveTab('invento')}
+              >
+                <span className="tab-dot" aria-hidden="true"></span>
+                <span>NezizInvento (Desktop)</span>
+              </button>
+              <button 
+                role="tab"
+                aria-selected={activeTab === 'sappcloud'}
+                className={`dash-tab-btn ${activeTab === 'sappcloud' ? 'active' : ''}`}
+                onClick={() => setActiveTab('sappcloud')}
+              >
+                <span className="tab-dot" aria-hidden="true"></span>
+                <span>SappCloud (Training)</span>
+              </button>
             </div>
 
-            {/* Adroit-style Proof Strip */}
-            <div className="proof-strip">
-                <div className="container proof-strip-inner">
-                    <div className="proof-item">
-                        <span className="proof-icon">✓</span>
-                        <span>Live E-Commerce & SaaS Platforms</span>
-                    </div>
-                    <div className="proof-separator">•</div>
-                    <div className="proof-item">
-                        <span className="proof-icon">✓</span>
-                        <span>Mamprobi, Accra HQ to Global Delivery</span>
-                    </div>
-                    <div className="proof-separator">•</div>
-                    <div className="proof-item">
-                        <span className="proof-icon">✓</span>
-                        <span>Custom Desktop & Cloud Systems</span>
-                    </div>
-                    <div className="proof-separator">•</div>
-                    <div className="proof-item">
-                        <span className="proof-icon">✓</span>
-                        <span>Proven Enterprise SLA & Support</span>
-                    </div>
+            {/* Content Preview */}
+            <div className="dash-content-grid">
+              <div className="dash-visual-preview">
+                <img 
+                  src={currentHighlight.image} 
+                  alt={`Screenshot showing ${currentHighlight.title}`} 
+                  className="dash-screenshot"
+                />
+                <div className="dash-preview-badge">
+                  <span className="badge-live-dot" aria-hidden="true"></span>
+                  {currentHighlight.status}
                 </div>
-            </div>
+              </div>
 
-            {/* Adroit-style Interactive Enterprise Showcase Window */}
-            <div className="container dash-outer">
-                <div className="dash-frame">
-                    {/* Window Title Bar */}
-                    <div className="dash-window-header">
-                        <div className="dash-window-controls">
-                            <span className="win-dot dot-close"></span>
-                            <span className="win-dot dot-min"></span>
-                            <span className="win-dot dot-max"></span>
-                        </div>
-                        <div className="dash-window-url">
-                            <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="3" y="6" width="10" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.2"/>
-                                <path d="M5.5 6V4.5C5.5 3.11929 6.61929 2 8 2C9.38071 2 10.5 3.11929 10.5 4.5V6" stroke="currentColor" strokeWidth="1.2"/>
-                            </svg>
-                            <span>neziz.studio / verified-deployments</span>
-                        </div>
-                        <div className="dash-window-status">
-                            <span className="status-indicator"></span>
-                            <span>Live Deployments</span>
-                        </div>
-                    </div>
+              <div className="dash-meta-panel">
+                <span className="meta-category-badge">{currentHighlight.tag}</span>
+                <h2 className="meta-title">{currentHighlight.title}</h2>
+                <p className="meta-description">{currentHighlight.desc}</p>
 
-                    {/* Dashboard Body */}
-                    <div className="dash-body">
-                        {/* Tab Switcher */}
-                        <div className="dash-tabs-bar">
-                            <button 
-                                className={`dash-tab-btn ${activeTab === 'invento' ? 'active' : ''}`}
-                                onClick={() => setActiveTab('invento')}
-                            >
-                                <span className="tab-dot"></span>
-                                <span>NezizInvento (Desktop)</span>
-                            </button>
-                            <button 
-                                className={`dash-tab-btn ${activeTab === 'layby' ? 'active' : ''}`}
-                                onClick={() => setActiveTab('layby')}
-                            >
-                                <span className="tab-dot"></span>
-                                <span>Neziz Cloud (SaaS)</span>
-                            </button>
-                            <button 
-                                className={`dash-tab-btn ${activeTab === 'adroit' ? 'active' : ''}`}
-                                onClick={() => setActiveTab('adroit')}
-                            >
-                                <span className="tab-dot"></span>
-                                <span>Adroit Cloud ERP</span>
-                            </button>
-                            <button 
-                                className={`dash-tab-btn ${activeTab === 'viotor' ? 'active' : ''}`}
-                                onClick={() => setActiveTab('viotor')}
-                            >
-                                <span className="tab-dot"></span>
-                                <span>Shop Viotor (E-Commerce)</span>
-                            </button>
-                        </div>
-
-                        {/* Interactive Showcase Preview */}
-                        <div className="dash-content-grid">
-                            <div className="dash-visual-preview">
-                                <img 
-                                    src={currentItem.image} 
-                                    alt={currentItem.title} 
-                                    className="dash-screenshot"
-                                />
-                                <div className="dash-preview-badge">
-                                    <span className="badge-live-dot"></span>
-                                    {currentItem.tag}
-                                </div>
-                            </div>
-
-                            <div className="dash-meta-panel">
-                                <span className="meta-category-badge">{currentItem.category}</span>
-                                <h3 className="meta-title">{currentItem.title}</h3>
-                                <p className="meta-description">{currentItem.desc}</p>
-                                
-                                <div className="meta-stats-row">
-                                    <div className="meta-stat-box">
-                                        <div className="stat-value">{currentItem.metric1}</div>
-                                        <div className="stat-label">Core Architecture</div>
-                                    </div>
-                                    <div className="meta-stat-box">
-                                        <div className="stat-value">{currentItem.metric2}</div>
-                                        <div className="stat-label">Operational Impact</div>
-                                    </div>
-                                </div>
-
-                                <div className="meta-cta-row">
-                                    {currentItem.externalUrl ? (
-                                        <a 
-                                            href={currentItem.externalUrl} 
-                                            target="_blank" 
-                                            rel="noopener noreferrer" 
-                                            className="btn btn-primary btn-sm"
-                                        >
-                                            {currentItem.actionText}
-                                        </a>
-                                    ) : (
-                                        <Link to={currentItem.link || '/portfolio'} className="btn btn-primary btn-sm">
-                                            {currentItem.actionText}
-                                        </Link>
-                                    )}
-                                    <Link to="/contact" className="btn btn-ghost btn-sm">
-                                        Request Similar Solution
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div className="meta-stack-row">
+                  <span className="stack-label">Confirmed Technologies:</span>
+                  <div className="tech-tags-group">
+                    {currentHighlight.stack.map((t, idx) => (
+                      <span key={idx} className="tech-pill">{t}</span>
+                    ))}
+                  </div>
                 </div>
+
+                <div className="meta-cta-row">
+                  <Link to={currentHighlight.caseStudyUrl} className="btn btn-primary btn-sm">
+                    Read Case Study & Scope →
+                  </Link>
+                  {currentHighlight.liveUrl && (
+                    <a 
+                      href={currentHighlight.liveUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="btn btn-outline btn-sm"
+                    >
+                      Visit Live Site ↗
+                    </a>
+                  )}
+                </div>
+              </div>
             </div>
-        </section>
-    );
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Hero;
