@@ -10,7 +10,7 @@ const Hero = () => {
       tag: 'E-Commerce Candidate',
       status: 'Live Marketplace',
       image: '/images/shopviotor.png',
-      desc: 'Frontend marketplace development serving Accra Technical University vendors and consumers, built with responsive product browsing and Mobile Money checkout touchpoints.',
+      desc: 'Frontend marketplace interface serving Accra Technical University vendors and consumers, built with responsive product browsing and direct order touchpoints.',
       stack: ['HTML5', 'CSS3', 'JavaScript', 'Responsive UI'],
       caseStudyUrl: '/portfolio/shop-viotor',
       liveUrl: 'https://www.shopviotor.com/'
@@ -25,15 +25,15 @@ const Hero = () => {
       caseStudyUrl: '/portfolio/wiloty-foundation',
       liveUrl: 'https://wilotyfoundation.org/'
     },
-    invento: {
-      title: 'NezizInvento — Desktop Inventory & Point-of-Sale Tool',
-      tag: 'Desktop Software',
-      status: 'Verified Working Tool',
-      image: '/images/nezizinvento.jpg',
-      desc: 'Standalone desktop inventory tool engineered for offline retail reliability, featuring live stock valuation calculation (GH₵13,400+), low-stock warning indicators, and sales logs.',
-      stack: ['Desktop UI Architecture', 'Local Storage', 'Offline Telemetry'],
-      caseStudyUrl: '/portfolio/nezizinvento',
-      liveUrl: null
+    adroit: {
+      title: 'Adroit Bureau — Corporate Marketing Website',
+      tag: 'Client Website Candidate',
+      status: 'Live Website',
+      image: '/images/Adroit.png',
+      desc: 'Responsive corporate marketing website layout developed to showcase IT consulting and enterprise services. (Scope note: marketing website only, not internal ERP).',
+      stack: ['HTML5', 'CSS3', 'JavaScript', 'Responsive UI'],
+      caseStudyUrl: '/portfolio/adroit-bureau',
+      liveUrl: 'https://home.adroitcloud.online/'
     },
     sappcloud: {
       title: 'SappCloud — Free Microsoft SQL Training Sessions',
@@ -180,12 +180,12 @@ const Hero = () => {
               </button>
               <button 
                 role="tab"
-                aria-selected={activeTab === 'invento'}
-                className={`dash-tab-btn ${activeTab === 'invento' ? 'active' : ''}`}
-                onClick={() => setActiveTab('invento')}
+                aria-selected={activeTab === 'adroit'}
+                className={`dash-tab-btn ${activeTab === 'adroit' ? 'active' : ''}`}
+                onClick={() => setActiveTab('adroit')}
               >
                 <span className="tab-dot" aria-hidden="true"></span>
-                <span>NezizInvento (Desktop)</span>
+                <span>Adroit Bureau (Web)</span>
               </button>
               <button 
                 role="tab"

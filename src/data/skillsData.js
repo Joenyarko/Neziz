@@ -78,3 +78,4 @@ export const supportingBackground = [
     evidence: 'Managed client communications and requirement collection across informal builds, voluntary community initiatives, and third-party web projects.'
   }
 ];
+

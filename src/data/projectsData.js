@@ -11,9 +11,9 @@ export const projectsData = [
     publicationStatus: 'candidate',
     candidateType: 'Client Website Candidate',
     dates: {
-      start: 'Month TBD, 2026',
-      end: 'Month TBD, 2026',
-      status: 'Pending exact date confirmation'
+      start: '',
+      end: '',
+      status: 'Dates not specified'
     },
     engagementType: 'Informal / Third-party project (Unconfirmed paid status)',
     exactRole: 'Frontend Website Developer',
@@ -55,11 +55,11 @@ export const projectsData = [
     publicationStatus: 'candidate',
     candidateType: 'NGO & Non-Profit Candidate',
     dates: {
-      start: 'Month TBD, 2026',
-      end: 'Month TBD, 2026',
-      status: 'Pending exact date confirmation'
+      start: '',
+      end: '',
+      status: 'Dates not specified'
     },
-    engagementType: 'Informal / Volunteer or third-party delivery (Pending confirmation)',
+    engagementType: 'Informal / Freelance (Arranged through a friend)',
     exactRole: 'Web Developer',
     collaborators: 'NGO organizers & volunteer contributors',
     problem: 'The Wiloty Foundation needed a dedicated digital platform to publicize grassroots community development initiatives, basic school support programs, and donor outreach across Ghana.',
@@ -83,10 +83,8 @@ export const projectsData = [
     testingPerformed: 'Tested for mobile responsiveness down to 320px width; verified contrast on key headings; checked touch-target sizes for mobile navigation.',
     handover: 'HTML/CSS templates and imagery assets handed over to foundation coordinator.',
     evidencedOutcome: 'Live NGO advocacy website actively accessible to local and international partners.',
-    scopeDisclaimer: 'Delivered web presentation and digital presence for the foundation.',
+    scopeDisclaimer: 'Delivered web presentation and digital presence for the foundation (informal freelance engagement arranged through a friend).',
     unresolvedFacts: [
-      'Exact timeline (start/end months) to be confirmed.',
-      'Formal confirmation of volunteer vs. paid status.',
       'Written confirmation from organization director for case study publication.'
     ]
   },
@@ -99,18 +97,18 @@ export const projectsData = [
     publicationStatus: 'candidate',
     candidateType: 'E-Commerce Candidate',
     dates: {
-      start: 'Month TBD, 2026',
-      end: 'Month TBD, 2026',
-      status: 'Pending exact date confirmation'
+      start: '',
+      end: '',
+      status: 'Dates not specified'
     },
-    engagementType: 'Informal / Project for friends / Collaborators (Unconfirmed employment)',
+    engagementType: 'Informal / Campus e-commerce project for friends & merchant partners',
     exactRole: 'Frontend Web Developer',
-    collaborators: 'Marketplace founders & student merchant partners',
+    collaborators: 'ATU merchant partners & founders (Solo vs. team role pending confirmation)',
     problem: 'Student entrepreneurs and local vendors at Accra Technical University (ATU) required an accessible, mobile-first marketplace to display product listings and facilitate customer ordering.',
     workPersonallyDelivered: [
       'Built responsive e-commerce storefront interfaces including product grids, category filtering, and item detail views.',
       'Integrated mobile navigation and search bars tailored for quick mobile browsing.',
-      'Implemented cart and order dispatch touchpoints supporting Ghanaian mobile money workflows.',
+      'Implemented customer inquiry and order routing interface.',
       'Focused on fast-loading image display across mobile network conditions.'
     ],
     confirmedStack: ['HTML5', 'CSS3', 'JavaScript', 'Responsive UI Components'],
@@ -127,10 +125,9 @@ export const projectsData = [
     testingPerformed: 'Simulated mobile phone viewports (320px–420px); tested product filter interactions and tap targets.',
     handover: 'Web templates and frontend application files deployed to hosting.',
     evidencedOutcome: 'Deployed live marketplace accessible to student vendors and consumers.',
-    scopeDisclaimer: 'Work focused on frontend storefront development and user interface integration.',
+    scopeDisclaimer: 'Work focused on frontend storefront development and user interface integration. All order volume, transaction metrics, and usage statistics are strictly omitted.',
     unresolvedFacts: [
-      'Exact dates of involvement pending developer confirmation.',
-      'Scope of backend payment integration vs. frontend delivery to be strictly bounded.',
+      'Confirm whether build was solo or with teammates.',
       'Publication permission confirmation with marketplace owner.'
     ]
   },
@@ -143,9 +140,9 @@ export const projectsData = [
     publicationStatus: 'candidate',
     candidateType: 'Web Application Candidate',
     dates: {
-      start: 'Month TBD, 2026',
-      end: 'Month TBD, 2026',
-      status: 'Pending exact date confirmation'
+      start: '',
+      end: '',
+      status: 'Dates not specified'
     },
     engagementType: 'Informal / Educational collaboration (Pending confirmation)',
     exactRole: 'Web Developer',
@@ -185,9 +182,9 @@ export const projectsData = [
     publicationStatus: 'candidate',
     candidateType: 'E-Commerce Candidate',
     dates: {
-      start: 'Month TBD, 2026',
-      end: 'Month TBD, 2026',
-      status: 'Pending exact date confirmation'
+      start: '',
+      end: '',
+      status: 'Dates not specified'
     },
     engagementType: 'Informal / Client website delivery (Pending confirmation)',
     exactRole: 'Frontend Website Developer',
@@ -227,9 +224,9 @@ export const projectsData = [
     publicationStatus: 'candidate',
     candidateType: 'Corporate Website Candidate',
     dates: {
-      start: 'Month TBD, 2026',
-      end: 'Month TBD, 2026',
-      status: 'Pending exact date confirmation'
+      start: '',
+      end: '',
+      status: 'Dates not specified'
     },
     engagementType: 'Informal / Collaborative agency build (Pending confirmation)',
     exactRole: 'Web Developer',
@@ -278,8 +275,8 @@ export const projectsData = [
     collaborators: 'Solo project',
     problem: 'Small retail merchants struggle to manage multi-part customer layaway (layby) purchases and installment tracking manually in physical notebooks or disconnected spreadsheets.',
     workPersonallyDelivered: [
-      'Architected web application views for tracking customer layby orders and payment milestones.',
-      'Designed database schema concepts for installment payment schedules and item reservation holds.',
+      'Architected web application views for tracking customer layby orders and installment progress.',
+      'Designed database schema concepts for installment schedules and item reservation holds.',
       'Built responsive administrative dashboard interface for tracking active layaway balances.'
     ],
     confirmedStack: ['HTML5', 'CSS3', 'JavaScript', 'React', 'PHP', 'MySQL'],
@@ -296,7 +293,7 @@ export const projectsData = [
     testingPerformed: 'Component-level testing of installment calculator formulas; responsive testing across desktop and tablet viewports.',
     handover: 'Self-hosted cloud deployment on neziz.cloud.',
     evidencedOutcome: 'Functional web application platform accessible at neziz.cloud.',
-    scopeDisclaimer: 'Personal development project exploring layaway accounting workflows for retail SME merchants.',
+    scopeDisclaimer: 'Personal SaaS project exploring layaway accounting workflows and installment management. Payment processing is managed offline/manually by retail merchants (no live or sandbox payment gateway claims).',
     unresolvedFacts: [
       'Developer to confirm feature-readiness and public staging vs production boundaries.'
     ]
@@ -306,41 +303,39 @@ export const projectsData = [
     slug: 'nezizinvento',
     title: 'NezizInvento — Desktop Inventory & Point-of-Sale Tool',
     clientName: 'NezizInvento (Personal / Standalone Tool)',
-    publicationPermission: 'Developer-owned project (Full permission)',
-    publicationStatus: 'published',
-    candidateType: 'Desktop Application',
+    publicationPermission: 'DRAFT_ONLY',
+    publicationStatus: 'archived_draft',
+    isArchived: true,
+    candidateType: 'Archived Draft',
     dates: {
-      start: 'Month TBD, 2026',
-      end: 'November 2026',
-      status: 'Confirmed active build'
+      start: '',
+      end: '',
+      status: 'Archived Draft'
     },
-    engagementType: 'Personal software build / Prototype',
+    engagementType: 'Personal software build / Draft',
     exactRole: 'Software Developer (Solo)',
     collaborators: 'Solo project',
-    problem: 'Small retail shops frequently face internet outages that disrupt cloud-only POS systems, causing halted sales and unrecorded cash transactions.',
+    problem: 'Small retail shops require offline-first point-of-sale and inventory record management.',
     workPersonallyDelivered: [
-      'Engineered desktop interface featuring an offline-first inventory dashboard and sales terminal.',
-      'Implemented real-time inventory valuation calculations (demonstrated at GH₵13,400+ stock in build).',
-      'Built low-stock warning indicators, category filtering, and daily sales logging.',
-      'Added local database backup triggers for offline data preservation.'
+      'Designed screen layouts for stock valuation, low-stock warnings, and sales logging.'
     ],
-    confirmedStack: ['Desktop Application Architecture', 'Local Data Storage', 'Offline-First UI', 'Telemetry'],
+    confirmedStack: ['Desktop UI Design', 'Offline User Flow'],
     screenshots: [
       {
         src: '/images/nezizinvento.jpg',
-        alt: 'NezizInvento desktop inventory dashboard showing stock valuation and sales metrics',
-        caption: 'NezizInvento desktop dashboard showing real-time inventory value and low-stock telemetry.'
+        alt: 'NezizInvento desktop inventory dashboard interface',
+        caption: 'NezizInvento desktop interface design.'
       }
     ],
     liveUrl: null,
-    liveStatus: 'Desktop Application / Local Install',
-    permittedCodeSample: 'Available upon request (developer-owned code)',
-    testingPerformed: 'Tested offline execution with simulated network disconnection; verified calculation accuracy of total inventory value and sales history logging.',
-    handover: 'Packaged executable and local backup script.',
-    evidencedOutcome: 'Verified working desktop software demonstrated in developer screenshots.',
-    scopeDisclaimer: 'Standalone desktop tool built to address retail offline requirements.',
+    liveStatus: 'Archived Draft',
+    permittedCodeSample: null,
+    testingPerformed: 'Internal layout verification.',
+    handover: 'Archived in local drafts.',
+    evidencedOutcome: 'Archived draft pending technical confirmation.',
+    scopeDisclaimer: 'Archived draft pending confirmation of underlying desktop framework, local database, and runtime specifications.',
     unresolvedFacts: [
-      'Exact desktop runtime framework (Electron, Python desktop, or local browser wrapper) to be formally noted on CV.'
+      'Archived until developer confirms underlying desktop framework and local database engine.'
     ]
   },
   {
@@ -388,23 +383,23 @@ export const projectsData = [
     id: 'willies-woodwork',
     slug: 'willies-woodwork',
     title: 'Willies Woodwork — Craftsman & Carpentry Portfolio Website',
-    clientName: 'Willies Woodwork (Preserved Entry for Review)',
-    publicationPermission: 'Pending developer confirmation',
-    publicationStatus: 'review_entry',
-    candidateType: 'Preserved Review Entry',
+    clientName: 'Willies Woodwork (Archived Draft)',
+    publicationPermission: 'DRAFT_ONLY',
+    publicationStatus: 'archived_draft',
+    isArchived: true,
+    candidateType: 'Archived Draft',
     dates: {
-      start: 'Pending confirmation',
-      end: 'Pending confirmation',
-      status: 'Preserved existing entry'
+      start: '',
+      end: '',
+      status: 'Archived Draft'
     },
-    engagementType: 'Informal / Client website build (Unconfirmed employment status)',
+    engagementType: 'Informal / Client website build (Unconfirmed details)',
     exactRole: 'Website Developer',
     collaborators: 'Business owner',
-    problem: 'Woodworking and custom furniture workshop required an online photo portfolio to display finished projects and provide customer contact options.',
+    problem: 'Woodworking and custom furniture workshop required an online photo portfolio to display finished projects.',
     workPersonallyDelivered: [
-      'Developed clean portfolio gallery layout to showcase carpentry and woodworking products.',
-      'Built mobile-responsive navigation and contact call-to-action buttons.',
-      'Optimized image presentation for mobile loading.'
+      'Developed portfolio gallery layout to showcase carpentry and woodworking products.',
+      'Built mobile-responsive navigation and contact call-to-action buttons.'
     ],
     confirmedStack: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design'],
     screenshots: [
@@ -415,34 +410,34 @@ export const projectsData = [
       }
     ],
     liveUrl: null,
-    liveStatus: 'Preserved Entry (Pending URL & publication review)',
-    permittedCodeSample: 'Pending client code release approval',
-    testingPerformed: 'Basic responsive checks across viewports.',
-    handover: 'Website files delivered to client.',
-    evidencedOutcome: 'Completed client showcase website.',
-    scopeDisclaimer: 'Preserved existing entry. Claims remain strictly limited to the website delivered; does not imply ongoing employment.',
+    liveStatus: 'Archived Draft',
+    permittedCodeSample: null,
+    testingPerformed: 'Basic responsive checks.',
+    handover: 'Delivered to client.',
+    evidencedOutcome: 'Archived draft pending developer confirmation of details.',
+    scopeDisclaimer: 'Archived draft. Kept private until developer confirms dates, scope, and client permissions.',
     unresolvedFacts: [
-      'Developer to confirm whether live URL exists or was hosted temporarily.',
-      'Confirmation of client permission to display business name.'
+      'Moved to archived drafts until developer confirms details.'
     ]
   },
   {
     id: 'rock-and-redeemer',
     slug: 'rock-and-redeemer',
     title: 'Rock & Redeemer (R&R) — Community Organization Website',
-    clientName: 'Rock & Redeemer (R&R) (Preserved Entry for Review)',
-    publicationPermission: 'Pending developer confirmation',
-    publicationStatus: 'review_entry',
-    candidateType: 'Preserved Review Entry',
+    clientName: 'Rock & Redeemer (R&R) (Archived Draft)',
+    publicationPermission: 'DRAFT_ONLY',
+    publicationStatus: 'archived_draft',
+    isArchived: true,
+    candidateType: 'Archived Draft',
     dates: {
-      start: 'Pending confirmation',
-      end: 'Pending confirmation',
-      status: 'Preserved existing entry'
+      start: '',
+      end: '',
+      status: 'Archived Draft'
     },
-    engagementType: 'Informal / Volunteer or third-party project (Unconfirmed employment)',
+    engagementType: 'Informal / Volunteer project (Unconfirmed details)',
     exactRole: 'Website Developer',
     collaborators: 'Community leaders',
-    problem: 'Community initiative required a digital presence to share announcements, mission statements, and contact details with members.',
+    problem: 'Community initiative required a digital presence to share announcements and mission statements.',
     workPersonallyDelivered: [
       'Created multi-page responsive web layout with mission, activities, and contact sections.',
       'Designed clear typography and mobile-friendly navigation.'
@@ -456,47 +451,48 @@ export const projectsData = [
       }
     ],
     liveUrl: null,
-    liveStatus: 'Preserved Entry (Pending review)',
-    permittedCodeSample: 'Pending approval',
+    liveStatus: 'Archived Draft',
+    permittedCodeSample: null,
     testingPerformed: 'Responsive device simulation.',
-    handover: 'HTML/CSS templates provided to organizers.',
-    evidencedOutcome: 'Delivered website for community organization.',
-    scopeDisclaimer: 'Preserved existing entry. Claims remain bounded strictly to the website developed.',
+    handover: 'Provided to organizers.',
+    evidencedOutcome: 'Archived draft pending developer confirmation of details.',
+    scopeDisclaimer: 'Archived draft. Kept private until developer confirms details.',
     unresolvedFacts: [
-      'Developer to confirm live URL status and formal publication permission.'
+      'Moved to archived drafts until developer confirms details.'
     ]
   },
   {
     id: 'saly-project',
     slug: 'saly-project',
     title: 'Saly — Client Website Project',
-    clientName: 'Saly (Preserved Entry for Review)',
-    publicationPermission: 'Pending developer confirmation (Unpublished Draft)',
-    publicationStatus: 'review_entry',
-    candidateType: 'Preserved Review Entry',
+    clientName: 'Saly (Archived Draft)',
+    publicationPermission: 'DRAFT_ONLY',
+    publicationStatus: 'archived_draft',
+    isArchived: true,
+    candidateType: 'Archived Draft',
     dates: {
-      start: 'Pending confirmation',
-      end: 'Pending confirmation',
-      status: 'Data in unpublished draft'
+      start: '',
+      end: '',
+      status: 'Archived Draft'
     },
-    engagementType: 'Informal / Client project (Details pending developer confirmation)',
+    engagementType: 'Informal / Client project (Unconfirmed details)',
     exactRole: 'Web Developer',
     collaborators: 'Pending confirmation',
-    problem: 'Details pending developer confirmation.',
+    problem: 'Details unconfirmed.',
     workPersonallyDelivered: [
-      'Frontend web development and site layout (scope to be verified by developer).'
+      'Frontend web development layout (scope unconfirmed).'
     ],
     confirmedStack: ['HTML5', 'CSS3', 'JavaScript'],
     screenshots: [],
     liveUrl: null,
-    liveStatus: 'In Review / Draft State',
-    permittedCodeSample: 'Pending confirmation',
+    liveStatus: 'Archived Draft',
+    permittedCodeSample: null,
     testingPerformed: 'Pending confirmation.',
     handover: 'Pending confirmation.',
-    evidencedOutcome: 'Scope pending confirmation from developer.',
-    scopeDisclaimer: 'Preserved draft entry. No public claims are made regarding this entry pending developer review.',
+    evidencedOutcome: 'Archived draft.',
+    scopeDisclaimer: 'Archived draft. Kept private until developer confirms details.',
     unresolvedFacts: [
-      'Developer to provide exact client name, project scope, dates, and live URL or screenshots.'
+      'Moved to archived drafts until developer confirms details.'
     ]
   },
   {
@@ -583,11 +579,17 @@ export const projectsData = [
 ];
 
 // Helper functions for filtering and lookup
+export const getPublishedProjects = () => {
+  return projectsData.filter(p => p.publicationStatus !== 'archived_draft' && !p.isArchived);
+};
+
 export const getProjectBySlug = (slug) => {
   return projectsData.find(p => p.slug === slug || p.id === slug);
 };
 
 export const getProjectsByCategory = (category) => {
-  if (!category || category === 'All') return projectsData;
-  return projectsData.filter(p => p.candidateType.toLowerCase().includes(category.toLowerCase()));
+  const published = getPublishedProjects();
+  if (!category || category === 'All') return published;
+  return published.filter(p => p.candidateType.toLowerCase().includes(category.toLowerCase()));
 };
+

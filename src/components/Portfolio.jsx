@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { projectsData } from '../data/projectsData';
+import { getPublishedProjects } from '../data/projectsData';
 
 const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -15,12 +15,14 @@ const Portfolio = () => {
     'Prototypes'
   ];
 
-  const filteredProjects = projectsData.filter(project => {
+  const publishedProjects = getPublishedProjects();
+
+  const filteredProjects = publishedProjects.filter(project => {
     // Category match
     const matchesCategory =
       selectedCategory === 'All' ||
-      (selectedCategory === 'Client Websites' && project.candidateType.includes('Corporate') || project.candidateType.includes('Client Website')) ||
-      (selectedCategory === 'Web Applications & SaaS' && (project.candidateType.includes('Web Application') || project.candidateType.includes('Desktop'))) ||
+      (selectedCategory === 'Client Websites' && (project.candidateType.includes('Corporate') || project.candidateType.includes('Client Website'))) ||
+      (selectedCategory === 'Web Applications & SaaS' && project.candidateType.includes('Web Application')) ||
       (selectedCategory === 'E-Commerce' && project.candidateType.includes('E-Commerce')) ||
       (selectedCategory === 'NGO & Non-Profit' && project.candidateType.includes('NGO')) ||
       (selectedCategory === 'Prototypes' && (project.publicationStatus === 'prototype' || project.candidateType.includes('Prototype')));

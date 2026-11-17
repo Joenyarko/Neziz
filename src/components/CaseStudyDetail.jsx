@@ -34,6 +34,7 @@ const CaseStudyDetail = () => {
       case 'prototype':
         return 'badge-orange';
       case 'review_entry':
+      case 'archived_draft':
         return 'badge-gray';
       default:
         return 'badge-blue';
@@ -46,6 +47,8 @@ const CaseStudyDetail = () => {
         return 'Verified Project';
       case 'prototype':
         return 'Experimental Prototype (Not Live)';
+      case 'archived_draft':
+        return 'Archived Draft (Pending Confirmation)';
       case 'review_entry':
         return 'Preserved Entry Under Review';
       default:
@@ -80,6 +83,16 @@ const CaseStudyDetail = () => {
           </p>
         </header>
 
+        {/* Archived Draft Banner */}
+        {project.isArchived && (
+          <aside className="scope-disclaimer-box" style={{ background: 'var(--surface-2)', borderColor: 'var(--border)', marginBottom: '1.25rem' }} aria-label="Draft notice">
+            <div className="disclaimer-icon" aria-hidden="true">📁</div>
+            <div className="disclaimer-content">
+              <strong>Archived Draft:</strong> This entry is currently an archived internal draft pending developer verification of scope, stack, or publication permissions. It is hidden from the public portfolio index.
+            </div>
+          </aside>
+        )}
+
         {/* Scope Disclaimer Alert */}
         {project.scopeDisclaimer && (
           <aside className="scope-disclaimer-box" aria-label="Scope definition">
@@ -94,7 +107,11 @@ const CaseStudyDetail = () => {
         <div className="case-study-meta-grid">
           <div className="meta-card card">
             <span className="meta-card-label">Start / End Timeline</span>
-            <span className="meta-card-value">{project.dates.start} – {project.dates.end}</span>
+            <span className="meta-card-value">
+              {project.dates.start || project.dates.end 
+                ? `${project.dates.start} – ${project.dates.end}` 
+                : 'Dates not specified'}
+            </span>
             <span className="meta-card-sub">{project.dates.status}</span>
           </div>
 
@@ -265,3 +282,4 @@ const CaseStudyDetail = () => {
 };
 
 export default CaseStudyDetail;
+
