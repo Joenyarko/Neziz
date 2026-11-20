@@ -8,39 +8,54 @@ import WhyChooseUs from './components/WhyChooseUs';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
 import GlobalSection from './components/GlobalSection';
-import Testimonials from './components/Testimonials';
 import AboutSection from './components/AboutSection';
+import TeamSection from './components/TeamSection';
+import TeamTeaser from './components/TeamTeaser';
 import ContactSection from './components/ContactSection';
 import CtaBanner from './components/CtaBanner';
 import Footer from './components/Footer';
 import Splash from './components/Splash';
+import NotFound from './components/NotFound';
+import SEO from './components/SEO';
 
-// Helper to scroll to top on route change
+// Pages
+import PrivacyPage from './pages/PrivacyPage';
+import SecurityPage from './pages/SecurityPage';
+
+// Helper to scroll to top or hash target on route change
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   useEffect(() => {
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+    }
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [pathname, hash]);
   return null;
 };
 
-// Home Page: Flagship experience
+// Home Page: Flagship experience with team teaser
 const HomePage = () => (
   <>
     <Hero />
     <WhyChooseUs />
     <Services />
     <Portfolio />
+    <TeamTeaser />
     <GlobalSection />
-    <Testimonials />
     <CtaBanner />
   </>
 );
 
-// Inner Pages with consistent CTA
+// Inner Pages
 const AboutPage = () => (
   <>
     <AboutSection />
+    <TeamSection />
     <GlobalSection />
     <CtaBanner />
   </>
@@ -68,14 +83,33 @@ const ContactPage = () => (
 );
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(() => {
+    if (typeof window !== 'undefined') {
+      if (window.location.search.includes('no_splash')) return false;
+      if (sessionStorage.getItem('neziz_has_visited')) return false;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return false;
+    }
+    return true;
+  });
+
+  const handleFinish = () => {
+    if (typeof window !== 'undefined') {
+      try {
+        sessionStorage.setItem('neziz_has_visited', 'true');
+      } catch {
+        // Ignore storage exceptions in restricted environments
+      }
+    }
+    setLoading(false);
+  };
 
   if (loading) {
-    return <Splash onFinish={() => setLoading(false)} />;
+    return <Splash onFinish={handleFinish} />;
   }
 
   return (
     <Router>
+      <SEO />
       <div className="app-shell fade-in">
         <ScrollToTop />
         <Navbar />
@@ -86,8 +120,10 @@ function App() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            {/* Fallback to Home */}
-            <Route path="*" element={<HomePage />} />
+            <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="/security" element={<SecurityPage />} />
+            {/* 404 Not Found for unknown paths */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />

@@ -24,7 +24,7 @@ const AboutSection = () => {
                             Founded in Mamprobi, Accra, Neziz was established to challenge the compromise between speed, beauty, and software resilience. We reject bloated templates and fragile quick-fixes in favor of robust, scalable engineering.
                         </p>
                         <p className="narrative-p">
-                            Whether building enterprise ERP platforms for industrial leaders, automated bank reconciliation engines for fintech ventures, or high-conversion commercial portals, our team brings international engineering standards to every line of code.
+                            Whether building bespoke web applications, online stores, or corporate websites, our team delivers clean, reliable code for every project.
                         </p>
 
                         <div className="about-checklist">
@@ -43,7 +43,7 @@ const AboutSection = () => {
                             <div className="checklist-item">
                                 <span className="check-icon">✓</span>
                                 <div>
-                                    <strong>Enterprise Reliability:</strong> Tested under load with zero-tolerance for unexpected downtime.
+                                    <strong>Technical Reliability:</strong> Thoroughly tested codebases engineered for stability and performance.
                                 </div>
                             </div>
                         </div>
@@ -52,24 +52,24 @@ const AboutSection = () => {
                     <div className="about-stats-col">
                         <div className="stats-card-grid">
                             <div className="stat-card card">
-                                <div className="stat-number">14+</div>
-                                <div className="stat-label">Enterprise & Growth Deployments</div>
-                                <div className="stat-sub">Across Africa & International Markets</div>
+                                <div className="stat-number">01</div>
+                                <div className="stat-label">Client Websites</div>
+                                <div className="stat-sub">Responsive, modern brand and marketing sites</div>
                             </div>
                             <div className="stat-card card">
-                                <div className="stat-number">99.9%</div>
-                                <div className="stat-label">Production SLA Uptime</div>
-                                <div className="stat-sub">High-availability cloud infrastructure</div>
+                                <div className="stat-number">02</div>
+                                <div className="stat-label">Web Applications</div>
+                                <div className="stat-sub">Tailored portals, dashboards, and internal tools</div>
                             </div>
                             <div className="stat-card card">
-                                <div className="stat-number">48%</div>
-                                <div className="stat-label">Average Efficiency Boost</div>
-                                <div className="stat-sub">Via automated client workflows</div>
+                                <div className="stat-number">03</div>
+                                <div className="stat-label">Online Stores</div>
+                                <div className="stat-sub">Digital commerce, checkout flows, and payment setup</div>
                             </div>
                             <div className="stat-card card">
-                                <div className="stat-number">24/7</div>
-                                <div className="stat-label">Dedicated Support & Monitoring</div>
-                                <div className="stat-sub">Immediate incident resolution</div>
+                                <div className="stat-number">04</div>
+                                <div className="stat-label">Maintenance & Updates</div>
+                                <div className="stat-sub">Structured support, monitoring, and ongoing updates</div>
                             </div>
                         </div>
                     </div>

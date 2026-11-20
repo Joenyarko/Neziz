@@ -52,23 +52,23 @@ const GlobalSection = () => {
 
                     <div className="map-card-metrics">
                         <div className="map-metric-item">
-                            <div className="metric-val">14+</div>
-                            <div className="metric-lbl">Countries Reached</div>
+                            <div className="metric-val">Accra</div>
+                            <div className="metric-lbl">Studio Location</div>
                         </div>
                         <div className="map-metric-divider"></div>
                         <div className="map-metric-item">
-                            <div className="metric-val">&lt; 2h</div>
-                            <div className="metric-lbl">Critical Support SLA</div>
+                            <div className="metric-val">Web &amp; Apps</div>
+                            <div className="metric-lbl">Core Services</div>
                         </div>
                         <div className="map-metric-divider"></div>
                         <div className="map-metric-item">
-                            <div className="metric-val">99.98%</div>
-                            <div className="metric-lbl">Platform Availability</div>
+                            <div className="metric-val">Direct</div>
+                            <div className="metric-lbl">Client Collaboration</div>
                         </div>
                         <div className="map-metric-divider"></div>
                         <div className="map-metric-item">
-                            <div className="metric-val">100%</div>
-                            <div className="metric-lbl">Cloud-Native Delivery</div>
+                            <div className="metric-val">Cloud</div>
+                            <div className="metric-lbl">Clean Deployment</div>
                         </div>
                     </div>
                 </div>

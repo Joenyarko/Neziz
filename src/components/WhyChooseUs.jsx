@@ -11,7 +11,7 @@ const WhyChooseUs = () => {
                     <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
                 </svg>
             ),
-            description: 'Our team comprises certified software engineers and systems architects with proven track records in high-throughput enterprise deployments.'
+            description: 'Our team comprises experienced software engineers focused on building clean, reliable, and maintainable software systems.'
         },
         {
             id: 2,
@@ -39,14 +39,14 @@ const WhyChooseUs = () => {
         },
         {
             id: 4,
-            title: '24/7 Mission-Critical Support',
-            tag: 'SLA Guaranteed',
+            title: 'Dedicated Support & Maintenance',
+            tag: 'Reliable Service',
             icon: (
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                 </svg>
             ),
-            description: 'Our dedicated engineers monitor your core applications around the clock, providing proactive maintenance and immediate incident response.'
+            description: 'We provide structured support, proactive maintenance, and prompt updates to keep your web applications running reliably.'
         },
         {
             id: 5,

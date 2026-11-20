@@ -44,7 +44,7 @@ const Services = () => {
                 </svg>
             ),
             description: 'Reliable engineering support, server management, security hardening, and database optimization to keep mission-critical operations operating without downtime.',
-            deliverables: ['Cloud Migration & Setup', '24/7 SLA Monitoring', 'Automated Backups', 'Zero-Downtime Deploys']
+            deliverables: ['Cloud Migration & Setup', 'Ongoing Maintenance & Monitoring', 'Automated Backups', 'Zero-Downtime Deploys']
         },
         {
             id: 4,

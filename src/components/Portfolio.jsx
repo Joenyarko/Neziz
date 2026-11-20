@@ -20,14 +20,14 @@ const Portfolio = () => {
         },
         {
             id: 2,
-            title: 'Neziz Cloud — Retail Layby & Installment Management SaaS',
+            title: 'Neziz Cloud — Multi-Tenant Daily Contribution (Susu) & Cloud ERP Platform',
             category: 'SaaS & Desktop Apps',
-            tag: 'Live Cloud SaaS',
+            tag: 'Live Cloud ERP',
             image: '/images/Neziz-mockup.png',
             url: 'https://neziz.cloud/',
-            desc: 'Specialized enterprise SaaS platform designed for retail layaway purchases. Automates flexible installment plans, customer ledger tracking, item holds, and automated payment reminders for retail merchants.',
-            stack: ['Cloud SaaS', 'Multi-Tenant', 'Payment Schedules', 'Merchant Portal'],
-            impact: 'Enables retail merchants to increase customer order volume and automate installment reconciliation.'
+            desc: 'Enterprise multi-tenant cloud platform built for micro-finance institutions, credit unions, and daily contribution (Susu) collectors. Features real-time cash reconciliation, agent collection tracking, digital customer passbooks with QR verification, branch reporting, and automated financial ledgers.',
+            stack: ['Multi-Tenant Cloud ERP', 'Daily Contribution / Susu', 'Digital QR Passbooks', 'Cash Reconciliation'],
+            impact: 'Automates daily field collections, eliminates paper passbook discrepancies, and provides real-time auditability across multiple branches.'
         },
 
         // 2. Modern E-Commerce
@@ -40,7 +40,7 @@ const Portfolio = () => {
             url: 'https://www.shopviotor.com/',
             desc: 'Premier Ghanaian multi-vendor digital commerce marketplace built for the Accra Technical University (ATU) community and Ghanaian consumers, equipped with instant Mobile Money & card checkout and automated vendor dispatch.',
             stack: ['Multi-Vendor Architecture', 'Mobile Money Pay', 'Vendor Dashboard', 'Cart & Order Routing'],
-            impact: 'Connects hundreds of student entrepreneurs with seamless campus and nationwide delivery.'
+            impact: 'Delivered a responsive multi-vendor marketplace with Mobile Money payment checkout.'
         },
         {
             id: 4,
@@ -64,7 +64,7 @@ const Portfolio = () => {
             url: 'https://sappcloud.net/',
             desc: 'Interactive cloud educational platform and technical resource hub providing structured Microsoft SQL Server training, database administration coursework, student sessions, and technical community management.',
             stack: ['Cloud Web Application', 'SQL Training Modules', 'Student Portal', 'Community Hub'],
-            impact: 'Empowers hundreds of aspiring data professionals and students with free, high-caliber SQL training.'
+            impact: 'Delivered an educational hub providing structured SQL training resources and sessions.'
         },
 
         // 4. NGO & Non-Profit
@@ -88,7 +88,7 @@ const Portfolio = () => {
             url: 'https://wilotyfoundation.org/',
             desc: 'Grassroots Ghanaian NGO portal committed to community advancement, basic education advocacy, underprivileged school support, and rural educational development.',
             stack: ['Grassroots Advocacy', 'Campaign Transparency', 'Donor Outreach', 'Events Portal'],
-            impact: 'Directly supported underprivileged basic schools and community learning centers in Ghana.'
+            impact: 'Delivered a digital presence to communicate educational initiatives and community development programs.'
         },
         {
             id: 8,
@@ -105,14 +105,14 @@ const Portfolio = () => {
         // 5. Corporate & Financial Websites
         {
             id: 9,
-            title: 'Adroit Cloud — Enterprise Operating System',
+            title: 'Adroit Bureau — Corporate Website',
             category: 'Corporate Websites',
-            tag: 'Enterprise Systems',
+            tag: 'Corporate Website',
             image: '/images/Adroit.png',
             url: 'https://home.adroitcloud.online/',
-            desc: 'Comprehensive multi-tenant ERP platform consolidating payroll, finance, inventory tracking, and executive telemetry into one unified command center across desktop, web, and mobile.',
-            stack: ['Enterprise Cloud ERP', 'Modular Architecture', 'REST APIs', 'Multi-Platform'],
-            impact: 'Reduced manual administrative overhead by 48% across multi-branch enterprise operations.'
+            desc: 'Corporate marketing website designed and built for Adroit Bureau, showcasing their services and business offerings with a responsive, modern presentation.',
+            stack: ['Corporate Website', 'Responsive Design', 'Brand Showcase', 'Contact Inquiries'],
+            impact: 'Delivered a clean, modern web presence for corporate client presentations.'
         },
         {
             id: 10,
@@ -145,7 +145,7 @@ const Portfolio = () => {
             url: null,
             desc: 'Bespoke, lightning-fast digital portfolio crafted for an executive industry leader, designed to showcase achievements, thought leadership, and consulting partnerships.',
             stack: ['Executive Branding', 'Editorial UI', 'Custom Typography', 'SEO Optimized'],
-            impact: 'Generated 3x increase in high-tier consulting inquiries within 60 days of launch.'
+            impact: 'Clean digital portfolio presentation for craftsmanship and design work.'
         }
     ];
 

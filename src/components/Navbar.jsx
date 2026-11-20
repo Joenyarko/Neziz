@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
+
+    const hamburgerBtnRef = useRef(null);
+    const closeBtnRef = useRef(null);
+    const drawerRef = useRef(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -19,10 +23,48 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Close mobile menu on route change
-    useEffect(() => {
+    // Close mobile menu on route change during render
+    const [prevPath, setPrevPath] = useState(location.pathname);
+    if (prevPath !== location.pathname) {
+        setPrevPath(location.pathname);
         setIsMenuOpen(false);
-    }, [location.pathname]);
+    }
+
+    // Background scroll locking when menu is open
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+            // Focus inside the drawer when opened
+            setTimeout(() => {
+                closeBtnRef.current?.focus();
+            }, 50);
+        } else {
+            document.body.style.overflow = '';
+        }
+
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isMenuOpen]);
+
+    // Handle Escape key to close menu and return focus to hamburger button
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === 'Escape' && isMenuOpen) {
+                e.preventDefault();
+                setIsMenuOpen(false);
+                hamburgerBtnRef.current?.focus();
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [isMenuOpen]);
+
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+        hamburgerBtnRef.current?.focus();
+    };
 
     const isActive = (path) => {
         if (path === '/' && location.pathname === '/') return true;
@@ -74,10 +116,12 @@ const Navbar = () => {
 
                 {/* Mobile Hamburger Toggle */}
                 <button 
+                    ref={hamburgerBtnRef}
                     className={`nav-hamburger ${isMenuOpen ? 'open' : ''}`} 
                     onClick={() => setIsMenuOpen(!isMenuOpen)} 
                     aria-label="Toggle navigation menu"
                     aria-expanded={isMenuOpen}
+                    aria-controls="mobile-nav-drawer"
                 >
                     <span className="hamburger-line"></span>
                     <span className="hamburger-line"></span>
@@ -86,7 +130,14 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Drawer Menu */}
-            <div className={`mobile-nav-drawer ${isMenuOpen ? 'drawer-open' : ''}`}>
+            <div 
+                ref={drawerRef}
+                id="mobile-nav-drawer"
+                role="dialog"
+                aria-modal="true"
+                aria-label="Navigation menu"
+                className={`mobile-nav-drawer ${isMenuOpen ? 'drawer-open' : ''}`}
+            >
                 <div className="mobile-drawer-inner">
                     <div className="mobile-drawer-top">
                         <img 
@@ -95,15 +146,16 @@ const Navbar = () => {
                             className="mobile-drawer-logo" 
                         />
                         <button 
+                            ref={closeBtnRef}
                             className="mobile-close-btn" 
-                            onClick={() => setIsMenuOpen(false)}
-                            aria-label="Close menu"
+                            onClick={closeMenu}
+                            aria-label="Close navigation menu"
                         >
                             &times;
                         </button>
                     </div>
 
-                    <nav className="mobile-drawer-links">
+                    <nav className="mobile-drawer-links" aria-label="Mobile Navigation">
                         <Link to="/" className={`mobile-nav-link ${isActive('/') ? 'active' : ''}`}>
                             Home
                         </Link>
@@ -139,7 +191,8 @@ const Navbar = () => {
             {isMenuOpen && (
                 <div 
                     className="mobile-backdrop" 
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={closeMenu}
+                    aria-hidden="true"
                 ></div>
             )}
         </header>

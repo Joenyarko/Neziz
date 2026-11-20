@@ -75,7 +75,6 @@ body {
   font-size: 15px;
   font-weight: 400;
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
 /* ── TYPOGRAPHY ── */
@@ -131,6 +130,18 @@ img {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
 }
 
 .section {

@@ -17,24 +17,24 @@ const Hero = () => {
             link: '/portfolio'
         },
         layby: {
-            title: 'Neziz Cloud — Retail Layby & Installment Management SaaS',
-            category: 'SaaS Platform',
-            tag: 'Live Cloud SaaS',
+            title: 'Neziz Cloud — Daily Contribution (Susu) & Cloud ERP Platform',
+            category: 'Cloud ERP Platform',
+            tag: 'Live Multi-Tenant Cloud',
             image: '/images/Neziz-mockup.png',
-            desc: 'Specialized enterprise SaaS platform designed for retail layaway purchases. Automates flexible installment plans, customer ledger tracking, item holds, and automated payment reminders.',
-            metric1: 'Automated Installment Schedules',
-            metric2: 'Multi-Tenant Cloud Architecture',
+            desc: 'Multi-tenant cloud ERP engineered for daily contributions, Susu collection management, customer digital passbooks with QR verification, and real-time branch financial reconciliation.',
+            metric1: 'Live Digital QR Passbooks',
+            metric2: 'Multi-Branch Reconciliation',
             actionText: 'Visit Live Platform ↗',
             externalUrl: 'https://neziz.cloud/'
         },
         adroit: {
-            title: 'Adroit Cloud — Enterprise Operating System',
-            category: 'Enterprise Solution',
-            tag: 'Enterprise Cloud',
+            title: 'Adroit Bureau — Corporate Website',
+            category: 'Corporate Website',
+            tag: 'Live Client Website',
             image: '/images/Adroit.png',
-            desc: 'Unified enterprise resource planning consolidating inventory, finance, payroll, and executive telemetry into one connected system across desktop, web, and mobile.',
-            metric1: '99.98% System Reliability',
-            metric2: 'Unified ERP Workflows',
+            desc: 'Corporate marketing website designed and built for Adroit Bureau, showcasing their services and business offerings with a responsive, modern presentation.',
+            metric1: 'Responsive Web Design',
+            metric2: 'Brand & Services Showcase',
             actionText: 'Visit Live Site ↗',
             externalUrl: 'https://home.adroitcloud.online/'
         },
@@ -116,7 +116,7 @@ const Hero = () => {
                     <div className="proof-separator">•</div>
                     <div className="proof-item">
                         <span className="proof-icon">✓</span>
-                        <span>Proven Enterprise SLA & Support</span>
+                        <span>Reliable Client Support & Maintenance</span>
                     </div>
                 </div>
             </div>
@@ -167,7 +167,7 @@ const Hero = () => {
                                 onClick={() => setActiveTab('adroit')}
                             >
                                 <span className="tab-dot"></span>
-                                <span>Adroit Cloud ERP</span>
+                                <span>Adroit Bureau (Web)</span>
                             </button>
                             <button 
                                 className={`dash-tab-btn ${activeTab === 'viotor' ? 'active' : ''}`}

@@ -4,12 +4,21 @@ const Splash = ({ onFinish }) => {
     const [fading, setFading] = useState(false);
 
     useEffect(() => {
+        // Immediate bypass for testing or users preferring reduced motion
+        if (typeof window !== 'undefined' && (
+            window.location.search.includes('no_splash') || 
+            window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        )) {
+            onFinish();
+            return;
+        }
+
         const timer = setTimeout(() => {
             setFading(true);
             setTimeout(() => {
                 onFinish();
-            }, 600);
-        }, 1500);
+            }, 300);
+        }, 800);
 
         return () => clearTimeout(timer);
     }, [onFinish]);
@@ -25,7 +34,7 @@ const Splash = ({ onFinish }) => {
                 <div className="splash-loader-bar">
                     <div className="splash-loader-progress"></div>
                 </div>
-                <span className="splash-tagline">Next Level Solutions • Enterprise Engineering</span>
+                <span className="splash-tagline">Websites • Web Applications • Online Stores</span>
             </div>
         </div>
     );
