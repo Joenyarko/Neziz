@@ -16,6 +16,19 @@ const TeamSection = () => {
                 <div className="team-cards-grid">
                     {TEAM_MEMBERS.map((member) => (
                         <div key={member.id} className="team-member-card card">
+                            {member.image ? (
+                                <div className="team-member-photo-frame">
+                                    <img 
+                                        src={member.image} 
+                                        alt={member.name} 
+                                        className="team-member-photo" 
+                                    />
+                                </div>
+                            ) : (
+                                <div className="team-member-avatar-placeholder">
+                                    <span>{member.initials}</span>
+                                </div>
+                            )}
                             <div className="team-member-header">
                                 <div className="team-member-meta">
                                     <h3 className="team-member-name">{member.name}</h3>

@@ -8,14 +8,16 @@ export const TEAM_MEMBERS = [
         name: 'Joseph Nyarko',
         role: 'Founder',
         bio: 'Joseph builds websites, web applications and online stores, turning ideas into practical digital products.',
-        initials: 'JN'
+        initials: 'JN',
+        image: '/images/joseph-nyarko.jpg'
     },
     {
         id: 'fitzgerald-quaye',
         name: 'Fitzgerald Quaye',
         role: 'Co-Founder',
         bio: "Fitzgerald co-founded Neziz and works with Joseph on the team's websites and software projects.",
-        initials: 'FQ'
+        initials: 'FQ',
+        image: '/images/fitzgerald-quaye.jpg'
     }
 ];
 
