@@ -57,7 +57,7 @@ const Footer = () => {
                             <li><Link to="/contact">Get in Touch</Link></li>
                             <li><a href={`mailto:${CONTACT_INFO.email}`}>Email: {CONTACT_INFO.email}</a></li>
                             <li><a href={getTelHref()}>Phone: {CONTACT_INFO.phoneDisplay}</a></li>
-                            <li><a href={getWhatsAppHref()} target="_blank" rel="noopener noreferrer">WhatsApp: Chat Directly ↗</a></li>
+                            <li><a href={getWhatsAppHref()} target="_blank" rel="noopener noreferrer">WhatsApp: {CONTACT_INFO.whatsappFormatted} ↗</a></li>
                         </ul>
                     </div>
                 </div>

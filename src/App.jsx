@@ -17,6 +17,7 @@ import Footer from './components/Footer';
 import Splash from './components/Splash';
 import NotFound from './components/NotFound';
 import SEO from './components/SEO';
+import WhatsAppButton from './components/WhatsAppButton';
 
 // Pages
 import PrivacyPage from './pages/PrivacyPage';
@@ -128,6 +129,7 @@ function App() {
         </main>
         <Footer />
       </div>
+      <WhatsAppButton />
     </Router>
   );
 }
